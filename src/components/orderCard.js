@@ -42,12 +42,8 @@ function OrderCard({ id=0, image="", name="", category="", price=0, quantity=0, 
         });
     }
 
-    // this.setState((prevState, props) => ({
-    //     quantity: quantity + 1
-    // })) 
-
     return (
-        <Grid item xs={2} sm={2} md={2} key={id}>
+        <Grid item  key={id}>
             <br></br>
             <Card>
                 <CardMedia sx={{height: 150, width: 300}} image={image} title={name}/>
