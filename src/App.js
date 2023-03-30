@@ -38,7 +38,7 @@ function App() {
       <List>
         <ListItem>
           <ListItemText><h3>Shopping Cart</h3></ListItemText>
-          <ListItemText><h3>Total: {
+          <ListItemText><h3>Total: ${
             totalPrice
           }</h3></ListItemText>
         </ListItem>
@@ -108,7 +108,7 @@ function App() {
         <div>
           <Grid container spacing={1} padding={5}>
             {data && data.filter((value) => {
-              if(searchInput.length > 0){ if(value.category.includes(searchInput) || value.orders.name.includes(searchInput)){ return value; }} 
+              if(searchInput.length > 0){ if(value.category.toLowerCase().includes(searchInput.toLowerCase()) || value.orders.name.toLowerCase().includes(searchInput.toLowerCase())){ return value; }} 
               else { return value; }
               return null;
             }).map((item) =>
